@@ -1,0 +1,25 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments (não precisa no Docker)
+venv/
+env/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+
+# Environment files (será injetado via Docker)
+.env
+
+# Database files
+*.db
+*.sqlite3
+
+# Logs
+*.log
