@@ -56,7 +56,7 @@ async def atualizar_usuario(
     # Se email está sendo atualizado, verificar se não existe
     if user_update.email:
         existing_user = user_service.get_user_by_email(db, user_update.email)
-        if existing_user and existing_user.id != user_id:
+        if existing_user is not None and existing_user.id != user_id:
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail="Email já cadastrado"
