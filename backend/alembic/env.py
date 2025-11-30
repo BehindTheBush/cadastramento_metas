@@ -1,4 +1,5 @@
 """Alembic environment configuration"""
+
 from logging.config import fileConfig
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
@@ -15,6 +16,10 @@ from app.core.database import Base
 
 # Import all models here so Alembic can detect them
 from app.models.user import User
+from app.models.regional import Regional
+from app.models.agencia import Agencia
+from app.models.colaborador import Colaborador
+
 # from app.models.gerente_negocio import GerenteNegocio
 # from app.models.objetivo import Objetivo
 # from app.models.indicador import Indicador
@@ -27,7 +32,7 @@ if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
 # Set SQLAlchemy URL from environment or settings
-config.set_main_option('sqlalchemy.url', settings.DATABASE_URL)
+config.set_main_option("sqlalchemy.url", settings.DATABASE_URL)
 
 # add your model's MetaData object here for 'autogenerate' support
 target_metadata = Base.metadata
