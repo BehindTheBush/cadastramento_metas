@@ -1,0 +1,13 @@
+{
+  "Servers": {
+    "1": {
+      "Name": "Cadastramento Metas DB",
+      "Group": "Servers",
+      "Host": "postgres",
+      "Port": 5432,
+      "MaintenanceDB": "cadastramento_metas",
+      "Username": "metas_user",
+      "SSLMode": "disable"
+    }
+  }
+}
